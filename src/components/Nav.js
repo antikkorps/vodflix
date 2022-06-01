@@ -3,9 +3,11 @@ import './Nav.scss';
 
 function nav() {
   return (
-    <div className='nav nav--black'>
-      <button className='nav_burger'>===</button>
-      <img src='./images/logo.png' alt='logo' className='nav_logo' />
+    <div className='nav show nav--black'>
+      <button className='nav__burger'>
+        <img src='./images/menu.png' alt='logo' className='menu' />
+      </button>
+      <img src='./images/logo.png' alt='logo' className='nav__logo' />
       <nav className='nav__links'>
         <a href='/' className='nav__link'>
           Home
@@ -17,7 +19,7 @@ function nav() {
           Tv-Shows
         </a>
       </nav>
-      <div className='nav__action'>
+      <div className='nav__actions'>
         <a href='/' className='nav__action'>
           Search
         </a>
