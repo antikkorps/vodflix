@@ -1,11 +1,15 @@
 import React from 'react';
 import './Nav.scss';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import RedeemIcon from '@mui/icons-material/Redeem';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function nav() {
   return (
     <div className='nav show nav--black'>
       <button className='nav__burger'>
-        <img src='./images/menu.png' alt='logo' className='menu' />
+        <MenuIcon />
       </button>
       <img src='./images/logo.png' alt='logo' className='nav__logo' />
       <nav className='nav__links'>
@@ -21,22 +25,18 @@ function nav() {
       </nav>
       <div className='nav__actions'>
         <a href='/' className='nav__action'>
-          Search
+          <SearchIcon />
         </a>
         <a href='/' className='nav__action'>
           Direct
         </a>
         <a href='/' className='nav__action'>
-          Gift
+          <RedeemIcon />
         </a>
         <a href='/' className='nav__action'>
-          Notification
+          <NotificationsIcon />
         </a>
-        <img
-          src='./images/pngtree-avatar.jpg'
-          alt='avatar'
-          className='avatar'
-        />
+        <img src='./images/avatar.png' alt='avatar' className='avatar' />
       </div>
     </div>
   );
