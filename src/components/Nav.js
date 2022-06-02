@@ -1,14 +1,37 @@
 import React from 'react';
+import { useState } from 'react';
 import './Nav.scss';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
-function nav() {
+function Nav() {
+  /* scroll */
+  const [navBlack, SetNavBlack] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const transitionNav = () => {
+    window.scrollY > 100 ? SetNavBlack(true) : SetNavBlack(false);
+  };
+
+  useState(() => {
+    document.addEventListener('scroll', transitionNav);
+  });
+
+  const handleClick = () => {
+    console.log(toggleMenu);
+    toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
+  };
+
+  /* scroll */
+
   return (
-    <div className='nav show nav--black'>
-      <button className='nav__burger'>
+    <div
+      className={`nav ${
+        navBlack || toggleMenu ? 'nav--black' : 'nav--transparent'
+      } ${toggleMenu && 'show'}`}
+    >
+      <button className='nav__burger' onClick={handleClick}>
         <MenuIcon />
       </button>
       <img src='./images/logo.png' alt='logo' className='nav__logo' />
@@ -42,4 +65,4 @@ function nav() {
   );
 }
 
-export default nav;
+export default Nav;
