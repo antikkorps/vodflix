@@ -4,7 +4,7 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: darkgrey;
+  background-color: #111;
 }
 
 *,
@@ -25,6 +25,6 @@ button {
 }
 
 .test {
-  height: 1800px;
+  height: 50vh;
   background-color: deepgrey;
 }

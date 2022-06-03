@@ -1,0 +1,25 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  font-size: 0.9rem;
+  padding-bottom: 3rem;
+  background-color: rgb (74, 74, 74);
+  color: white;
+  &__content {
+    width: 60vw;
+    padding: 8vh 4% 0 4%;
+    .banner__title {
+      font-size: 1.5rem;
+    }
+    .banner__buttons {
+      display: flex;
+      .banner__button {
+        display: flex;
+        align-items: center;
+        color: inherit;
+      }
+    }
+  }
+}
