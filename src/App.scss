@@ -16,15 +16,18 @@ body {
   outline: none;
 }
 
+h1,
+p {
+  margin-bottom: 1rem;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
 button {
   background-color: none;
   border: none;
   @media screen and (min-width: 768px) {
     display: none;
   }
-}
-
-.test {
-  height: 50vh;
-  background-color: deepgrey;
 }
