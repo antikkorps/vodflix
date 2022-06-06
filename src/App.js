@@ -11,8 +11,8 @@ function App() {
       <Nav />
       <Banner />
       <Row
-        title='Trending Now'
-        fetchUrl={Requests.fetchNetTrendings}
+        title='All Providers'
+        fetchUrl={Requests.fetchPopular}
         isPoster={true}
       />
       <Row title='Trend' fetchUrl={Requests.fetchTrending} />
